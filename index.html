@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="it">
-<!-- SORGENTE: https://it.squarespace.com/templates/clarkson-fluid-demo-it -->
-<!-- DEMO: https://clarkson-fluid-demo-it.squarespace.com/ -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./public/favicon.jpg">
+    <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <meta property="og:title" content="Marchesi F.lli">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://static.wixstatic.com/media/cd5ba4_fa2d97ad86f14362b3aeb7aa8005c3b2~mv2.jpg/v1/fill/w_980,h_735,al_c,q_85,usm_0.66_1.00_0.01/cd5ba4_fa2d97ad86f14362b3aeb7aa8005c3b2~mv2.jpg">
-    <meta property="og:url" content="http://marchesiflli.com">
+    <meta property="og:image"
+        content="https://static.wixstatic.com/media/cd5ba4_fa2d97ad86f14362b3aeb7aa8005c3b2~mv2.jpg/v1/fill/w_980,h_735,al_c,q_85,usm_0.66_1.00_0.01/cd5ba4_fa2d97ad86f14362b3aeb7aa8005c3b2~mv2.jpg">
+    <meta property="og:url" content="https://marchesiflli.com">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="slider.css">
     <script src="script.js" defer></script>
     <title>Marchesi F.lli</title>
 </head>
@@ -19,69 +23,157 @@
 
     <header>
         <a href="#">
-            <img class="company-logo" src="./public/logo-mf-no-bg.png" alt="logo"/>
+            <img class="company-logo" src="./public/logo-bg-white.png" alt="logo" />
         </a>
 
-        <div class="nav-links">
-            <a href="#">Chi siamo</a>
-            <a href="#">Prodotti e servizi</a>
-            <a href="#">Contatti</a>
-        </div>
-
+        <nav class="hamburger-menu-icon">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+        </nav>
+        
     </header>
-
-    <div class="landing-container">
-        <img 
-            class="landing-image"
-            src="./public/foto-2.jpg"
-            alt="Mietitrebbia">
-        <div class="overlay-text"></div>
+    
+    <div class="menu">
+        <a href="./index.html">Home</a>
+        <a href="./company.html">Azienda</a>
+        <a href="./work.html">I nostri servizi</a>
+        <a href="./contacts.html">Contatti</a>
     </div>
 
-    <section>
-        <p>
-            La <strong>Marchesi F.lli</strong> è più di un'azienda: è una famiglia. Siamo orgogliosi delle nostre radici
-            familiari, perché
-            crediamo che sia proprio questo legame a costituire la nostra forza. Dal nostro esordio negli anni '80,
-            abbiamo
-            sempre puntato su valori come la collaborazione, il rispetto e la passione per il lavoro, coinvolgendo non
-            solo
-            i titolari ma anche ogni singolo dipendente in un progetto comune. Questa sinergia ci consente di garantire
-            ai
-            nostri clienti non solo prodotti di alta qualità, ma anche un servizio che mette al centro la loro
-            soddisfazione.
-        </p>
-    </section>
+    <div class="slides-container" id="slides-container#1">
 
-    <section>
+        <div class="slide">
+            <img class="landing-image" src="./public/foto-2.jpg" alt="Mietitrebbia">
+        </div>
+
+        <div class="slide">
+            <img class="landing-image" src="./public/foto-3.jpg" alt="Mietitrebbia">
+        </div>
+
+        <div class="slide">
+            <img class="landing-image" src="./public/foto-4.jpg" alt="Mietitrebbia">
+        </div>
+
+    </div>
+
+    <div class="slide-banner">
+        <h2>Dove l'esperienza incontra l'innovazione</h2>
+        <p>
+            L’azienda, nata nel 1981,
+            certificata ISO 9001,
+            opera nel settore dell’innovazione e
+            costruzione meccanica
+        </p>
+
+        <br>
+
+        <a href="./company.html">
+            <button class="show-more-btn">
+                Scopri di più
+            </button>
+        </a>
+    </div>
+
+
+    <br>
+    <br>
+    
+    <h2 style="text-align: center;">I nostri servizi</h2>
+
+    <section class="cards-container">
         
+        <div class="card">
+            <img class="card-img" src="./public/costruzioni.jpeg" alt="logo" />
+            <div class="card-body">
+                <h3 class="title caps-lock">Costruzioni meccaniche</h3>
+                <p>
+                    Progettiamo e realizziamo attrezzature robuste e innovative,
+                    come sollevatori posteriori e lame da neve,
+                    per soddisfare le esigenze di agricoltori e professionisti.
+                </p>
+                <a href="./work.html">
+                    <button class="btn-base">
+                        Dettagli
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img" src="./public/assemblaggio.jpeg" alt="logo" />
+            <div class="card-body">
+                <h3 class="title caps-lock">Assemblaggio meccanico</h3>
+                <p>
+                    Offriamo servizi di assemblaggio meccanico specializzato,
+                    garantendo precisione e affidabilità
+                    per ogni componente delle tue attrezzature.
+                </p>
+                <a href="./work.html">
+                    <button class="btn-base">
+                        Dettagli
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img" src="./public/foto-3.jpg" alt="logo" />
+            <div class="card-body">
+                <h3 class="title caps-lock">Mietitrebbiatura conto terzi</h3>
+                <p>
+                    Offriamo servizi di mietitrebbiatura conto terzi,
+                    garantendo efficienza, precisione e
+                    risultati ottimali per ogni raccolto,
+                    grazie alla nostra esperienza.
+                </p>
+                <a href="./work.html">
+                    <button class="btn-base">
+                        Dettagli
+                    </button>
+                </a>
+            </div>
+
+        </div>
+
     </section>
 
     <footer>
         <div>
-            <p>
-                ©
-                <script>document.write(/\d{4}/.exec(Date())[0])</script> - Marchesi F.lli
-            </p>
-            <p>
-                Sede operativa: <a href="https://g.co/kgs/VKA35JU">Via Zaccarini 2, San Nicolò - Rottofreno, 29010 - PC</a>
-            </p>
+            <p>Marchesi F.lli di Marchesi G. & C. snc</p>
             <p>
                 Sede legale: <a href="https://g.co/kgs/FqpswYz">Località Tamborlani 20, Bobbio, 29022 - PC</a>
             </p>
+            <p>
+                Sede operativa: <a href="https://g.co/kgs/VKA35JU">Via Zaccarini 2, San Nicolò - Rottofreno, 29010 -
+                    PC</a>
+            </p>
+
+            Email: <a href="mailto:info@marchesiflli.com" target="_blank" aria-label="email">info@marchesiflli.com</a>
+            </a> - Tel: <a href="tel:0523468895">0523468895</a>
         </div>
 
         <div class="footer-links">
-            <a href="./about.html">Chi siamo</a>
-            <a href="./about.html">Prodotti e servizi</a>
-            <a href="./about.html">Contatti</a>
 
             <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
                 <img width="30" src="public/linkedin.png" alt="linkedin" />
             </a>
+
+            <a href="https://g.co/kgs/VKA35JU" target="_blank" aria-label="Maps">
+                <img width="30" src="public/maps.svg" alt="Maps" />
+            </a>
+
         </div>
 
     </footer>
+
+    <p style="text-align: center; font-size: .7rem;">
+        ©
+        <script>document.write(/\d{4}/.exec(Date())[0])</script> - Marchesi F.lli - P.IVA 0877780338
+    </p>
 
 
 </body>

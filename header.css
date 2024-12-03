@@ -1,0 +1,75 @@
+.hamburger-menu-icon {
+  position: relative;
+  z-index: 9999;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  background-color: white;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  background-color: #003366;
+  right: 0px;
+  bottom: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  transition: opacity 600ms, visibility 600ms;
+  font-size: larger;
+  font-weight: 800;
+}
+
+.menu-active {
+  opacity: 0.97;
+  visibility: visible;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #555;
+}
+
+.menu-toggle:checked + .menu-icon + .menu {
+  display: flex;
+}
+
+.menu-toggle:checked + .menu-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle:checked + .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle:checked + .menu-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
