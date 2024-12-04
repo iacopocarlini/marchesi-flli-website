@@ -36,8 +36,22 @@ function slidePrev(slidesContainer) {
   }
 }
 
-const homeSliderInterval = setInterval(() => slideNext(slidesContainer1), 3000);
-const companySliderInterval = setInterval(() => slideNext(slidesContainer3), 3000);
+function stopSlider(sliderInterval) {
+  if (sliderInterval) {
+    clearInterval(sliderInterval);
+  }
+}
+
+window.addEventListener('load', function() {
+  const homeSliderInterval = setInterval(() => slideNext(slidesContainer1), 3000);
+  const companySliderInterval = setInterval(() => slideNext(slidesContainer3), 3000);
+
+  slidesContainer1?.addEventListener('touchstart', () => stopSlider(homeSliderInterval));
+  slidesContainer1?.addEventListener('mousedown', () => stopSlider(homeSliderInterval));
+
+  slidesContainer3?.addEventListener('touchstart', () => stopSlider(companySliderInterval));
+  slidesContainer3?.addEventListener('mousedown', () => stopSlider(companySliderInterval));
+});
 
 // Modal
 const expandedModalText = {

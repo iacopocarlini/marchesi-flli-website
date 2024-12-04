@@ -14,7 +14,7 @@ html {
 
 body {
     -webkit-font-smoothing: antialiased;
-    font-size: 18px;
+    font-size: 16px;
     margin: 0;
 }
 
@@ -32,7 +32,6 @@ header {
 }
 
 button {
-    background-color: var(--red);
     border: none;
 }
 
@@ -104,7 +103,11 @@ figcaption {
 }
 
 .title {
-    font-family: Montserrat;
+    font-size: xx-large;
+}
+
+.subtitle {
+    font-size: x-large;
 }
 
 .caps-lock {
@@ -112,7 +115,8 @@ figcaption {
 }
 
 .show-more-btn {
-    width: 200px;
+    width: 70%;
+    max-width: 400px;
     height: 70px;
     border-radius: 5px;
     color: white;
@@ -140,15 +144,25 @@ figcaption {
     opacity: 0.8;
 }
 
+.primary {
+    background-color: var(--red);
+}
+
+.secondary {
+    background-color: white;
+    border: 1px solid var(--red);
+    color: var(--red);
+}
+
 section {
     display: flex;
     flex-direction: column;
-    padding: 1rem 1rem;
+    padding: 0.8rem;
 }
 
 .cards-container {
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .cards-grid-container {
@@ -161,6 +175,8 @@ section {
 
 .card {
     border-radius: 10px;
+    border-top: 3px solid var(--grey);
+    box-shadow: 0 8px 8px -4px var(--grey);
     background-color: var(--light-grey);
     overflow: hidden;
     max-width: 450px;
@@ -243,7 +259,7 @@ footer {
     justify-content: space-evenly;
     gap: 1rem;
     background-color: #f5f5f5;
-    font-size: 0.7rem;
+    font-size: smaller;
     padding: 1rem 1rem;
     margin-top: 2rem;
 }
@@ -257,6 +273,10 @@ footer {
 @media (min-width: 720px) {
     main {
         padding: 1rem 3rem;
+    }
+
+    .cards-container {
+        gap: 1.2rem;
     }
 
     .card-body {

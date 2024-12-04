@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./public/favicon.jpg">
-    <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='preload'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='preload'>
+    <meta name="description" content="L’azienda, nata nel 1981, certificata ISO 9001, opera nel settore dell’innovazione e costruzione meccanica">
     <meta property="og:title" content="Marchesi F.lli">
+    <meta property="og:description" content="L’azienda, nata nel 1981, certificata ISO 9001, opera nel settore dell’innovazione e costruzione meccanica">
     <meta property="og:type" content="website">
-    <meta property="og:image"
-        content="https://static.wixstatic.com/media/cd5ba4_fa2d97ad86f14362b3aeb7aa8005c3b2~mv2.jpg/v1/fill/w_980,h_735,al_c,q_85,usm_0.66_1.00_0.01/cd5ba4_fa2d97ad86f14362b3aeb7aa8005c3b2~mv2.jpg">
-    <meta property="og:url" content="https://marchesiflli.com">
+    <meta property="og:image" content="https://www.marchesiflli.com/public/sede.jpeg">
+    <meta property="og:url" content="https://www.marchesiflli.com">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="slider.css">
@@ -23,7 +24,7 @@
 
     <header>
         <a href="#">
-            <img class="company-logo" src="./public/logo-bg-white.png" alt="logo" />
+            <img class="company-logo" src="./public/logo-no-bg-txt-white.png" alt="logo" />
         </a>
 
         <nav class="hamburger-menu-icon">
@@ -47,21 +48,21 @@
     <div class="slides-container" id="slides-container#1">
 
         <div class="slide">
-            <img class="landing-image" src="./public/foto-2.jpg" alt="Mietitrebbia">
+            <img class="landing-image" src="./public/foto-2-min.jpg" alt="Mietitrebbia">
         </div>
 
         <div class="slide">
-            <img class="landing-image" src="./public/foto-3.jpg" alt="Mietitrebbia">
+            <img loading="lazy" class="landing-image" src="./public/foto-3-min.jpg" alt="Mietitrebbia">
         </div>
 
         <div class="slide">
-            <img class="landing-image" src="./public/foto-4.jpg" alt="Mietitrebbia">
+            <img loading="lazy" class="landing-image" src="./public/foto-4-min.jpg" alt="Mietitrebbia">
         </div>
 
     </div>
 
     <div class="slide-banner">
-        <h2>Dove l'esperienza incontra l'innovazione</h2>
+        <h2 class="title">Dove l'esperienza incontra l'innovazione</h2>
         <p>
             L’azienda, nata nel 1981,
             certificata ISO 9001,
@@ -72,7 +73,7 @@
         <br>
 
         <a href="./company.html">
-            <button class="show-more-btn">
+            <button class="show-more-btn primary">
                 Scopri di più
             </button>
         </a>
@@ -82,21 +83,21 @@
     <br>
     <br>
     
-    <h2 style="text-align: center;">I nostri servizi</h2>
+    <h2 style="text-align: center;" class="subtitle">I nostri servizi</h2>
 
     <section class="cards-container">
         
         <div class="card">
-            <img class="card-img" src="./public/costruzioni.jpeg" alt="logo" />
+            <img loading="lazy" class="card-img" src="./public/costruzioni.jpeg" alt="logo" />
             <div class="card-body">
-                <h3 class="title caps-lock">Costruzioni meccaniche</h3>
+                <h3 class="caps-lock">Costruzioni meccaniche</h3>
                 <p>
                     Progettiamo e realizziamo attrezzature robuste e innovative,
                     come sollevatori posteriori e lame da neve,
                     per soddisfare le esigenze di agricoltori e professionisti.
                 </p>
                 <a href="./work.html">
-                    <button class="btn-base">
+                    <button class="btn-base secondary">
                         Dettagli
                     </button>
                 </a>
@@ -104,16 +105,16 @@
         </div>
 
         <div class="card">
-            <img class="card-img" src="./public/assemblaggio.jpeg" alt="logo" />
+            <img loading="lazy" class="card-img" src="./public/assemblaggio.jpeg" alt="logo" />
             <div class="card-body">
-                <h3 class="title caps-lock">Assemblaggio meccanico</h3>
+                <h3 class="caps-lock">Assemblaggio meccanico</h3>
                 <p>
                     Offriamo servizi di assemblaggio meccanico specializzato,
                     garantendo precisione e affidabilità
                     per ogni componente delle tue attrezzature.
                 </p>
                 <a href="./work.html">
-                    <button class="btn-base">
+                    <button class="btn-base secondary">
                         Dettagli
                     </button>
                 </a>
@@ -121,9 +122,9 @@
         </div>
 
         <div class="card">
-            <img class="card-img" src="./public/foto-3.jpg" alt="logo" />
+            <img loading="lazy" class="card-img" src="./public/foto-3-min.jpg" alt="logo" />
             <div class="card-body">
-                <h3 class="title caps-lock">Mietitrebbiatura conto terzi</h3>
+                <h3 class="caps-lock">Mietitrebbiatura conto terzi</h3>
                 <p>
                     Offriamo servizi di mietitrebbiatura conto terzi,
                     garantendo efficienza, precisione e
@@ -131,7 +132,7 @@
                     grazie alla nostra esperienza.
                 </p>
                 <a href="./work.html">
-                    <button class="btn-base">
+                    <button class="btn-base secondary">
                         Dettagli
                     </button>
                 </a>
@@ -170,9 +171,9 @@
 
     </footer>
 
-    <p style="text-align: center; font-size: .7rem;">
+    <p style="text-align: center; font-size: smaller;">
         ©
-        <script>document.write(/\d{4}/.exec(Date())[0])</script> - Marchesi F.lli - P.IVA 0877780338
+        <script>document.write(/\d{4}/.exec(Date())[0])</script> - Marchesi F.lli di Marchesi G. & C. snc - P.IVA 0877780338
     </p>
 
 
