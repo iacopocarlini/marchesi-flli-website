@@ -18,6 +18,10 @@ body {
     margin: 0;
 }
 
+h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+}
+
 header {
     position: sticky;
     top: 0;
@@ -78,11 +82,10 @@ a {
     text-decoration: none;
 }
 
-
 .ellipsis {
     display: -webkit-box; /* For line clamping */
-  -webkit-line-clamp: 3; /* Limits to 3 lines */
-  -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Limits to 3 lines */
+    -webkit-box-orient: vertical;
     line-clamp: 3;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -97,13 +100,13 @@ figure {
 }
 
 figcaption {
-    font-family: "Montserrat";
     text-align: center;
     padding: 5px 20px;
 }
 
 .title {
     font-size: xx-large;
+    letter-spacing: -0.05em;
 }
 
 .subtitle {
@@ -124,6 +127,7 @@ figcaption {
     cursor: pointer;
     font-weight: 800;
     transition: 0.5s;
+    border-radius: 9999px;
 }
 
 .show-more-btn:hover {
@@ -152,17 +156,24 @@ figcaption {
     background-color: white;
     border: 1px solid var(--red);
     color: var(--red);
+    border-radius: 9999px;
 }
 
 section {
     display: flex;
     flex-direction: column;
     padding: 0.8rem;
+    background-color: white;
+    max-width: 1000px;
+    margin-inline: auto;
 }
 
 .cards-container {
+    display: flex;
     justify-content: space-between;
     gap: 2rem;
+    flex-direction: column;
+    margin-top: 1em;
 }
 
 .cards-grid-container {
@@ -175,7 +186,7 @@ section {
 
 .card {
     border-radius: 10px;
-    border-top: 3px solid var(--grey);
+    border-top: 3px solid var(--red);
     box-shadow: 0 8px 8px -4px var(--grey);
     background-color: var(--light-grey);
     overflow: hidden;
@@ -192,11 +203,11 @@ section {
 }
 
 .card-img:hover {
-    transform: scale(1.1); /* Zoom in on hover */
+    transform: scale(1.1);
 }
 
 .card-body {
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
     text-align: center;
 }
 
@@ -204,6 +215,10 @@ section {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.less-important-text {
+    color: var(--grey);
 }
 
 .justify-text {
@@ -262,6 +277,10 @@ footer {
     font-size: smaller;
     padding: 1rem 1rem;
     margin-top: 2rem;
+
+    .footer-caption {
+        display: none;
+    }
 }
 
 .footer-links {
@@ -273,10 +292,13 @@ footer {
 @media (min-width: 720px) {
     main {
         padding: 1rem 3rem;
+        max-width: 700px;
+        margin-inline: auto;
     }
 
     .cards-container {
         gap: 1.2rem;
+        flex-direction: row;
     }
 
     .card-body {
@@ -286,7 +308,6 @@ footer {
     section {
         padding-left: 2rem;
         padding-right: 2rem;
-        flex-direction: row;
     }
 
     .nav-links {
@@ -300,6 +321,10 @@ footer {
     footer {
         flex-direction: row;
         padding: 2rem 2rem;
+
+        .footer-caption {
+            display: block;
+        }
     }
 
     .footer-links {
